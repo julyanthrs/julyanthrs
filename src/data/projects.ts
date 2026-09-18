@@ -1,0 +1,68 @@
+import type { Project } from "./types";
+
+export const projects: readonly Project[] = [
+  {
+    slug: "ledgerline",
+    title: "Ledgerline",
+    discipline: "UI/UX + Development",
+    summary: "A calm money dashboard for freelancers juggling five currencies.",
+    year: "2026",
+    layout: "left",
+    visual: "finance",
+    caseStudy: {
+      role: "Lead product designer and frontend engineer",
+      challenge: "Freelancers tracked invoices across spreadsheets, banks and payment apps, and couldn't see their real monthly income.",
+      approach: "Mapped twelve interviews into a single 'available to spend' number, then built a React dashboard with streamed updates and keyboard-first filtering.",
+      outcome: "Weekly active use rose 41% in beta, and support tickets about balances dropped by half.",
+      stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Figma"],
+    },
+  },
+  {
+    slug: "atelier-noir",
+    title: "Atelier Noir",
+    discipline: "Art Direction + E-commerce",
+    summary: "An editorial storefront where every drop reads like a magazine spread.",
+    year: "2025",
+    layout: "right",
+    visual: "commerce",
+    caseStudy: {
+      role: "UI designer and creative developer",
+      challenge: "The brand's catalogue felt like a spreadsheet, and its best garments disappeared in a uniform product grid.",
+      approach: "Designed a modular editorial layout system and built scroll-driven lookbooks with GSAP on a headless commerce backend.",
+      outcome: "Average session length doubled, and conversion on featured drops grew 23%.",
+      stack: ["Next.js", "GSAP", "Shopify Storefront API", "Tailwind"],
+    },
+  },
+  {
+    slug: "pulse-fm",
+    title: "Pulse FM",
+    discipline: "Product Design + Motion",
+    summary: "A listening app that turns live radio into a shared, visual moment.",
+    year: "2025",
+    layout: "center",
+    visual: "music",
+    caseStudy: {
+      role: "Product designer and prototyper",
+      challenge: "Listeners dropped off within minutes because live radio had no sense of what was playing next or who else was listening.",
+      approach: "Prototyped a reactive waveform player and live listener reactions, testing six motion variants before handing off production specs.",
+      outcome: "Median listening time went from 7 to 19 minutes in the pilot city.",
+      stack: ["Figma", "Framer Motion", "React Native", "Web Audio API"],
+    },
+  },
+  {
+    slug: "grain-system",
+    title: "Grain Design System",
+    discipline: "Design Systems + Engineering",
+    summary: "One token source powering four products, two platforms and a dark mode.",
+    year: "2024",
+    layout: "split",
+    visual: "system",
+    caseStudy: {
+      role: "Design systems engineer",
+      challenge: "Four product teams maintained separate button, form and colour styles that drifted apart every release.",
+      approach: "Built a token pipeline from Figma variables to CSS and native code, with accessible React primitives and visual regression tests.",
+      outcome: "UI inconsistency bugs fell 68%, and new screens shipped roughly twice as fast.",
+      stack: ["TypeScript", "Style Dictionary", "Storybook", "Radix", "Playwright"],
+    },
+  },
+];

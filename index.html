@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Kai Moreno — web developer and UI/UX designer building digital experiences that feel intuitive, expressive, and alive." />
+    <title>Kai Moreno — Web Developer & UI/UX Designer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Martian+Mono:wdth,wght@87.5..112.5,300..600&display=swap" rel="stylesheet" />
+    <style>
+      /* Static boot bar: visible before any JavaScript runs, then adopted by the React loading screen. */
+      html, body { margin: 0; background: #000; }
+      #boot { position: fixed; inset: 0; z-index: 95; background: #000; }
+      #boot-bar {
+        position: absolute; left: 0; bottom: 2.5rem; height: 1px; width: 0;
+        background: #ff2e88; box-shadow: 0 0 12px #ff2e88;
+        animation: boot-progress 2.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes boot-progress { to { width: 14%; } }
+      @media (prefers-reduced-motion: reduce) { #boot-bar { animation: none; width: 6%; } }
+    </style>
+  </head>
+  <body>
+    <div id="boot" aria-hidden="true"><div id="boot-bar"></div></div>
+    <noscript><style>#boot { display: none; }</style></noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
