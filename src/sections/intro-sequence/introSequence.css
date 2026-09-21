@@ -1,0 +1,78 @@
+/*
+ * Scoped styles for the ported "IntroSequence" section (originally from the
+ * "Pages to Merge" portfolio). Everything here is namespaced with an
+ * `introSeq-` prefix and its own CSS custom properties so it can never
+ * collide with the host portfolio's Tailwind theme tokens or class names.
+ */
+
+@font-face {
+  font-family: "IntroSeq Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url("../../assets/fonts/archivo-latin-wdth-normal.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "IntroSeq Instrument Serif";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/instrument-serif-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IntroSeq JetBrains Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2");
+}
+
+.introSeq-section {
+  --introseq-void: #050505;
+  --introseq-hot: #ff2d95;
+  --introseq-blush: #ff9fcc;
+  --introseq-petal: #ffc1dc;
+  --introseq-gutter: clamp(1rem, 3vw, 2.75rem);
+
+  background-color: var(--introseq-void);
+}
+
+.introSeq-shell {
+  padding-inline: var(--introseq-gutter);
+}
+
+.introSeq-display {
+  font-family: "IntroSeq Archivo", "Arial Narrow", Arial, sans-serif;
+  font-weight: 800;
+  line-height: 0.82;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.introSeq-display-condensed {
+  font-variation-settings: "wdth" 62;
+}
+
+.introSeq-display-wide {
+  font-variation-settings: "wdth" 125;
+}
+
+.introSeq-annotation {
+  /* Color intentionally omitted: this project's Tailwind CSS is emitted inside
+     cascade layers, while this stylesheet is unlayered, so an unlayered color
+     here would always beat a Tailwind color utility applied alongside it
+     (unlike the source project, where both lived in layers and the utility
+     won). The one usage of this class pairs it with an explicit color
+     utility in JSX, so color is left to that utility instead. */
+  font-family: "IntroSeq JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.introSeq-serif {
+  font-family: "IntroSeq Instrument Serif", Georgia, "Times New Roman", serif;
+}

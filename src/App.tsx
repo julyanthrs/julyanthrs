@@ -11,6 +11,7 @@ import { Navigation } from "@/components/layout/Navigation";
 import { Marquee } from "@/components/layout/Marquee";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/sections/Hero";
+import { IntroSequence } from "@/sections/intro-sequence/IntroSequence";
 import { About } from "@/sections/About";
 import { Work } from "@/sections/work/Work";
 import { Experience } from "@/sections/experience/Experience";
@@ -70,6 +71,7 @@ export const App = () => {
             <Navigation />
             <main id="main" tabIndex={-1} className="outline-none">
               <Hero />
+              <IntroSequence />
               <About />
               <Marquee />
               <Work />

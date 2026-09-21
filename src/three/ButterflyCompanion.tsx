@@ -26,7 +26,7 @@ import { useButterflyModel } from "./butterfly/useButterflyModel";
 
 const MAX_DELTA = 1 / 30;
 /** On-screen wingspan at neutral depth: a share of viewport width, within sensible pixel limits. */
-const WINGSPAN = { viewportShare: 0.065, minPx: 60, maxPx: 110 } as const;
+const WINGSPAN = { viewportShare: 0.04, minPx: 36, maxPx: 68 } as const;
 /** The pointer counts as idle after this long without moving. */
 const POINTER_IDLE_MS = 1800;
 const ANCHOR_SELECTOR = "[data-butterfly-anchor]";
