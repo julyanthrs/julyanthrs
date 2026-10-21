@@ -1,4 +1,4 @@
-# Kai Moreno — Portfolio
+Julyan - Portfolio
 
 A single-scroll creative portfolio for a web developer + UI/UX designer.
 React 19, TypeScript (strict), Tailwind CSS v4, GSAP + ScrollTrigger, Lenis, Framer Motion and Three.js via React Three Fiber.
